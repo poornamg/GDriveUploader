@@ -7,6 +7,7 @@ from bot import (
   BOT_TOKEN,
   DOWNLOAD_DIRECTORY
   )
+from pyrogram.enums import ParseMode
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -28,7 +29,7 @@ if __name__ == "__main__":
         api_id=APP_ID,
         api_hash=API_HASH,
         plugins=plugins,
-        parse_mode="markdown",
+        parse_mode=ParseMode.MARKDOWN,
         workdir=DOWNLOAD_DIRECTORY
     )
     LOGGER.info('Starting Bot !')
